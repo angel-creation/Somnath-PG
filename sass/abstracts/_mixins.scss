@@ -1,0 +1,67 @@
+@use "sass:math";
+
+//flex
+@mixin flex($display: null, $flow: null, $justify-c: null, $align-i: null, $align-c: null, $align-s: null) {
+	display: $display;
+	flex-flow: $flow;
+	justify-content: $justify-c;
+	align-items: $align-i;
+	align-content: $align-c;
+	align-self: $align-s;
+}
+//btn
+
+// scss-docs-start btn-outline-variant-mixin
+@mixin button-light-variant(
+	$color,
+	$background: #{rgba(to-rgb($color), var(--#{$prefix}bg-opacity, 0.1))},
+	$color-hover: color-contrast($color),
+	$active-background: $color,
+	$active-border: $color,
+	$active-color: color-contrast($active-background)
+) {
+	--#{$prefix}btn-bg: #{$background};
+	--#{$prefix}btn-color: #{$color};
+	--#{$prefix}btn-hover-color: #{$color-hover};
+	--#{$prefix}btn-hover-bg: #{$active-background};
+	--#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+	--#{$prefix}btn-active-color: #{$active-color};
+	--#{$prefix}btn-active-bg: #{$active-background};
+	--#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+	--#{$prefix}btn-disabled-color: #{$color};
+	--#{$prefix}btn-disabled-bg: transparent;
+	--#{$prefix}gradient: none;
+	--#{$prefix}btn-border-color: none;
+}
+// scss-docs-end btn-outline-variant-mixin
+//fonts
+@mixin font($font-w: null, $font-s: null, $font-l: null, $font-f: $font) {
+	font: $font-w #{$font-s}/#{$font-l} $font-f;
+}
+
+//box shadow
+@mixin shadow($x: null, $y: null, $blur: null, $color: null) {
+	box-shadow: $x $y $blur $color;
+}
+//position
+@mixin position($position: null, $top: null, $right: null, $bottom: null, $left: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+//background
+@mixin bg(
+	$image: null,
+	$position: null,
+	$size: null,
+	$repeat: null,
+	$attachment: null,
+	$origin: null,
+	$clip: null,
+	$color: null
+) {
+	background: $image $position #{"/"} $size $repeat $attachment $origin $clip $color;
+}

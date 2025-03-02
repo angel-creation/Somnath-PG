@@ -1,0 +1,142 @@
+ /* Pricing Cards */
+ .pricing-section {
+    padding-top: clamp(1.25rem, -3.75rem + 12.5vw, 6.25rem);
+    background: #f0f0f0;
+  }
+
+  .heading{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(0.9375rem, -1.25rem + 5.4688vw, 3.125rem);
+
+    h2{
+              
+      font-weight: bold;
+      margin-bottom:  clamp(0.9375rem, -0.625rem + 3.9063vw, 2.5rem);
+      color: $black;
+    }
+    p{
+     color: $grey;
+    }
+  }
+
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.625rem, 0rem + 1.5625vw, 1.25rem);
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .pricing-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    border:  2px solid #2196F3;
+  }
+
+  .pricing-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  p{
+    text-align: center;
+  }
+
+  .pricing-card h3 {
+    border-radius: 10px 10px 0 0;
+    font-size: 22px;
+
+    font-weight: bold;
+    color: $white ;
+    padding: 15px 0;
+    background-color: #2196F3;
+    border-bottom: 1px solid $white;
+  }
+
+  .pricing-card h4{
+    font-size: 38px;
+   list-style: 48px
+   ;
+    font-weight: 700;
+    padding: 15px 0;
+    background-color: #2196F3;
+    color: $white;
+
+  }
+
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .pricing-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:last-child{
+        border-bottom: none;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+  }
+
+  /* Hover Effects */
+  .pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1200px) {
+    .pricing-section .pricing-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+  }
+@media (max-width: 991px) {
+    .pricing-section .pricing-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+  }
+
+@media (max-width: 768px) {
+    .pricing-section .pricing-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+  }
+
+  @media (max-width: 568px) {
+    .pricing-section .pricing-cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+  }

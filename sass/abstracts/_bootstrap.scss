@@ -1,0 +1,115 @@
+@import "../bootstrap/functions";
+$prefix: sp-;
+
+@import "./custom-variables";
+@import "../bootstrap/variables";
+@import "../bootstrap/variables-dark";
+@import "../bootstrap/maps";
+@import "../bootstrap/mixins";
+
+@import "../bootstrap/root";
+@import "../bootstrap/utilities";
+
+$all-colors: map-merge-multiple(
+	$primarys,
+	$grays,
+	$blues,
+	$indigos,
+	$purples,
+	$pinks,
+	$reds,
+	$oranges,
+	$yellows,
+	$greens,
+	$teals,
+	$cyans
+);
+
+$utilities: map-merge(
+	$utilities,
+	(
+		"color":
+			map-merge(
+				map-get($utilities, "color"),
+				(
+					values: map-merge(map-get(map-get($utilities, "color"), "values"), ($all-colors))
+				)
+			),
+		"background-color": (
+			property: background-color,
+			class: bg,
+			local-vars: (
+				"bg-opacity": 1
+			),
+			values:
+				map-merge(
+					$utilities-bg-colors,
+					(
+						"transparent": transparent,
+						"body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
+						"body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
+						"primary-100": rgba($primary-100, var(--#{$prefix}bg-opacity)),
+						"primary-200": rgba($primary-200, var(--#{$prefix}bg-opacity)),
+						"primary-300": rgba($primary-300, var(--#{$prefix}bg-opacity)),
+						"primary-400": rgba($primary-400, var(--#{$prefix}bg-opacity)),
+						"primary-500": rgba($primary-500, var(--#{$prefix}bg-opacity)),
+						"primary-600": rgba($primary-600, var(--#{$prefix}bg-opacity)),
+						"primary-700": rgba($primary-700, var(--#{$prefix}bg-opacity)),
+						"primary-800": rgba($primary-800, var(--#{$prefix}bg-opacity)),
+						"primary-900": rgba($primary-900, var(--#{$prefix}bg-opacity))
+					)
+				)
+		),
+		"bg-opacity": (
+			css-var: true,
+			class: bg-opacity,
+			values: (
+				5: 0.05,
+				10: 0.1,
+				15: 0.15,
+				20: 0.2,
+				25: 0.25,
+				30: 0.3,
+				35: 0.35,
+				40: 0.4,
+				45: 0.45,
+				50: 0.5,
+				75: 0.75,
+				100: 1
+			)
+		),
+		"border-opacity": (
+			css-var: true,
+			class: border-opacity,
+			values: (
+				5: 0.05,
+				10: 0.1,
+				15: 0.15,
+				20: 0.2,
+				25: 0.25,
+				30: 0.3,
+				35: 0.35,
+				40: 0.4,
+				45: 0.45,
+				50: 0.5,
+				75: 0.75,
+				100: 1
+			)
+		)
+	)
+);
+
+@import "../bootstrap/reboot";
+@import "../bootstrap/type";
+@import "../bootstrap/images";
+@import "../bootstrap/containers";
+@import "../bootstrap/grid";
+@import "../bootstrap/helpers";
+@import "../bootstrap/utilities/api";
+
+@import "../bootstrap/buttons";
+@import "../bootstrap/forms";
+@import "../bootstrap/offcanvas";
+@import "../bootstrap/close";
+@import "../bootstrap/accordion";
+@import "../bootstrap/transitions";

@@ -1,0 +1,13 @@
+.custom-btn{
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+     gap: 20px ;
+     border: 1px solid $secondary;
+     background-color: $white;
+     transition: 0.5s;
+
+     &:hover{
+        background-color:  $primary;
+     }
+}

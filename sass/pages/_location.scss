@@ -1,0 +1,29 @@
+.sp-location{
+    width: 100%;
+    height: auto;
+    padding-top: clamp(1.25rem, -3.75rem + 12.5vw, 6.25rem);
+    padding-bottom: clamp(0.9375rem, -1.25rem + 5.4688vw, 3.125rem);
+    background: #f0f0f0;
+
+    .sp-location-wrapper{
+        background: rgba(255, 255, 255, 0.2);
+        padding: clamp(0.625rem, -0.625rem + 3.125vw, 1.875rem);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
+    }
+
+    iframe{
+        width: 100%;
+        border: 100px ;
+    }
+
+    h2{
+        font-weight: bold;
+        margin-bottom:  clamp(0.9375rem, -0.625rem + 3.9063vw, 2.5rem);
+        color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

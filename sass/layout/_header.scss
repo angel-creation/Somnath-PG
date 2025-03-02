@@ -1,0 +1,136 @@
+.#{$prefix}header{
+  
+        
+      
+        
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+        
+      
+
+        &-wrapper{
+            padding: clamp(0.9375rem, 0rem + 2.3438vw, 1.875rem);
+            box-shadow: $shadow;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 0 20px 20px;
+
+            &.scrolled {
+                padding: 10px 20px;  // Header shrink ho jayega
+                background: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              }
+        }
+
+
+        // Navigation Menu
+.nav-menu {
+    ul {
+      display: flex;
+      list-style: none;
+      
+      li {
+        margin: 0 15px;
+  
+        a {
+         font-family:$font ;
+          text-decoration: none;
+          color: $black;
+          font-size: 20px;
+
+
+          font-weight: 500;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  // Hamburger Menu
+.hamburger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; // Hide by default
+  }
+
+
+ 
+
+  // Call Button
+.call-section {
+    position: relative;
+  }
+
+  .call-btn {
+    background: $primary;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  
+    &:hover {
+      background: darken($primary, 10%);
+    }
+  }
+
+  // Call Dropdown
+.call-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    box-shadow: $shadow;
+    padding: 10px;
+    border-radius: 5px;
+  
+    a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: $text;
+      font-size: 16px;
+  
+      &:hover {
+        background: #f1f1f1;
+      }
+    }
+  
+    &.active {
+      display: block;
+    }
+  }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .#{$prefix}header{
+        .nav-menu {
+            display: none;
+          }
+        
+          .hamburger {
+            display: block;
+          }
+        }
+    }
+ 
