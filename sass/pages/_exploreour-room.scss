@@ -17,43 +17,14 @@
        color: $grey;
        margin-bottom: clamp(0.9375rem, -1.25rem + 5.4688vw, 3.125rem);
     }
+
   
-    .slider-container {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    
-    }
   
-    .slider {
-      display: flex;
-      gap: clamp(0.9375rem, 0rem + 2.3438vw, 1.875rem);
-      transition: transform 0.5s ease-in-out;
-    }
-  
-    .slide {
-      flex: 0 0 33.333%;
-      overflow: hidden;
-      border-radius: 10px;
-      
-      position: relative;
-      transition: transform 0.4s ease, filter 0.3s ease;
-      
-      img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-        border-radius: 10px;
-        
-      }
-  
-      &:hover {
-        transform: scale(1.05);
-        filter: brightness(0.85);
-        border-radius: 10px;
-      }
-    }
+   
+   .owl-carousel .owl-item img {
+    height: 300px;
+    object-fit: cover ;
+   }
   }
   
   // Responsive Adjustments

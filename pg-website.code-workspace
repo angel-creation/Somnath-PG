@@ -1,24 +1,15 @@
 {
-	"folders": [
+	"liveSassCompile.settings.formats": [
 		{
-			"path": "."
+			"format": "compressed",
+			"extensionName": ".min.css",
+			"savePath": "/assets/css"
 		}
 	],
-	"settings": {
-		"liveSassCompile.settings.formats": [
-			{
-				"format": "compressed",
-				"extensionName": ".min.css",
-				"savePath": "/assets/css",
-				"savePathReplacementPairs": null
-			}
-		],
-		"liveSassCompile.settings.excludeList": [
-			"/**/node_modules/**",
-			"/.vscode/**",
-			"/sass/bootstrap/**",
-		],
-		"liveSassCompile.settings.generateMap": false
-
-	}
+	"liveSassCompile.settings.excludeList": [
+		"/**/node_modules/**",
+		"/.vscode/**",
+		"/sass/bootstrap/**"
+	],
+	"liveSassCompile.settings.generateMap": false
 }

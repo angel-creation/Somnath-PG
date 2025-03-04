@@ -1,8 +1,4 @@
 .#{$prefix}header{
-  
-        
-      
-        
         position: fixed;
         width: 100%;
         top: 0;
@@ -10,6 +6,8 @@
         z-index: 1000;
         transition: all 0.3s ease-in-out;
         
+
+
       
 
         &-wrapper{
@@ -119,7 +117,18 @@
 
 }
 
+@media (max-width: 991px) {
 
+  .#{$prefix}header{
+      .nav-menu {
+          display: none;
+        }
+      
+        .hamburger {
+          display: block;
+        }
+      }
+  }
 
 @media (max-width: 768px) {
 
@@ -134,3 +143,21 @@
         }
     }
  
+    @media (max-width: 576px) {
+
+      .#{$prefix}header{
+          .nav-menu {
+              display: none;
+            }
+          
+            .hamburger {
+              display: block;
+            }
+          }
+          .custom-btn {
+        
+          display: none !important; 
+         
+          }
+      }
+   
