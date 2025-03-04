@@ -145,3 +145,10 @@
       }
   }
 }
+
+@media (max-width: 768px) {
+  .#{$prefix}hero{
+    height: 500px;
+  }
+
+}

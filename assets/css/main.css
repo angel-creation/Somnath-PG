@@ -17840,6 +17840,11 @@ button {
   }
 }
 
+@media (max-width: 768px) {
+  .sp-hero {
+    height: 500px;
+  }
+}
 .room-slider {
   text-align: center;
   padding-top: clamp(1.25rem, -3.75rem + 12.5vw, 6.25rem);
